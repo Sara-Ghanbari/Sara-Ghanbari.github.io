@@ -1,0 +1,134 @@
+.section-inner {
+  min-width: 0;
+}
+.gallery-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #6c8c7d #ffffff08;
+  padding: 8px 3px 20px;
+  position: relative;
+}
+.gallery-card {
+  flex: 0 0 310px;
+  width: 310px;
+  min-height: 500px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-card:hover {
+  transform: translateY(-3px);
+}
+.gallery-card > .map-visual,
+.gallery-card > .network-visual,
+.gallery-card > .project-visual {
+  width: 100%;
+}
+.gallery-card .project-info {
+  align-items: flex-start;
+}
+.gallery-card .project-info p {
+  min-height: 58px;
+}
+.gallery-card > .tags {
+  margin-top: auto;
+}
+.gallery-card .project-action {
+  align-self: stretch;
+}
+.project-visual {
+  background: radial-gradient(ellipse at center, #333044, #20272c);
+  border-bottom: 1px solid var(--border);
+}
+.project-visual svg {
+  display: block;
+  width: 100%;
+  height: 185px;
+}
+.visual-vision {
+  background: #243935;
+}
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 14px;
+}
+.gallery-controls > span {
+  color: var(--mint);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.gallery-controls > span span,
+.gallery-controls p {
+  color: var(--muted);
+  font-size: 10px;
+}
+.gallery-controls > div {
+  display: flex;
+  gap: 8px;
+}
+.gallery-controls button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+}
+.gallery-controls button:hover:not(:disabled) {
+  background: var(--mint);
+  color: #172c22;
+}
+.gallery-controls button:disabled {
+  opacity: 0.25;
+}
+@media (max-width: 540px) {
+  .gallery-card {
+    flex-basis: min(270px, 88%);
+    width: min(270px, 88%);
+    min-height: 460px;
+  }
+  .gallery-card .project-info {
+    padding-inline: 15px;
+  }
+  .gallery-card .project-info h3 {
+    font-size: 17px;
+  }
+  .gallery-card .eyebrow {
+    font-size: 7px;
+  }
+  .gallery-controls p {
+    font-size: 8px;
+  }
+  .project-visual svg {
+    height: 155px;
+  }
+}
+.gallery-card .project-info {
+  padding: 20px 18px 14px;
+  gap: 10px;
+}
+.gallery-card .project-info h3 {
+  font-size: 20px;
+}
+.gallery-card .project-info .eyebrow {
+  font-size: 8px;
+  line-height: 1.7;
+}
+.gallery-card .circle-arrow {
+  width: 28px;
+  height: 28px;
+}
+.gallery-card > .tags {
+  padding-inline: 18px;
+}
+.gallery-card .project-action {
+  margin-inline: 18px;
+}

@@ -1,0 +1,62 @@
+dialog {
+  background: #1b2325;
+  border: 1px solid #50655c;
+  color: #edf1ef;
+  max-width: 680px;
+  width: calc(100% - 36px);
+  max-height: 85svh;
+  border-radius: 12px;
+  padding: 45px;
+  box-shadow: 0 30px 100px #0009;
+}
+dialog::backdrop {
+  background: #090d12ba;
+  backdrop-filter: blur(8px);
+}
+.dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  background: transparent;
+  border: 0;
+  line-height: 1;
+  padding: 5px 8px;
+}
+.dialog-content > .eyebrow {
+  font-size: 9px;
+  color: var(--mint);
+  padding-right: 15px;
+}
+.dialog-content h2 {
+  font-size: 36px;
+  margin: 22px 0;
+}
+.dialog-description {
+  font-size: 15px;
+  color: #bcc8c2;
+}
+.dialog-role {
+  font-size: 10px;
+  color: #91aa9b;
+  border-block: 1px solid var(--border);
+  padding: 15px 0;
+  margin: 22px 0;
+}
+.dialog-content h3 {
+  font-size: 14px;
+}
+.dialog-content ul {
+  padding-left: 18px;
+  font-size: 13px;
+  color: #b6c3bb;
+  line-height: 1.8;
+}
+.dialog-content li {
+  padding: 5px 0;
+}
+.project-note {
+  font-size: 10px;
+  color: #92a298;
+  margin: 24px 0;
+}

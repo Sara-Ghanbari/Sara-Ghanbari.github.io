@@ -1,0 +1,123 @@
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #493353;
+}
+.landscape {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.scene-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(25, 19, 39, 0.55), rgba(28, 22, 39, 0.2) 65%),
+    linear-gradient(0deg, rgba(17, 17, 28, 0.45), transparent);
+}
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar);
+  padding: 37px 34px 26px 38px;
+  border-right: 1px solid rgba(239, 228, 249, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  background: rgba(25, 20, 34, 0.15);
+}
+.name > span {
+  color: var(--mint);
+}
+.identity {
+  margin-top: 0;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.9px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.identity .eyebrow {
+  color: #d3c7df;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+.name {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 750;
+  font-size: 39px;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  margin: 15px 0 17px;
+}
+.identity > p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #e2d8e8;
+}
+.location {
+  display: block;
+  font-size: 11px;
+  color: #d3c7df;
+  margin-top: 18px;
+}
+.location > span {
+  font-size: 17px;
+  margin-right: 7px;
+}
+nav {
+  margin-top: auto;
+  padding-top: 40px;
+  display: grid;
+  gap: 5px;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 0;
+  color: #ccbed8;
+  font-size: 12px;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+nav a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+nav a[aria-current] {
+  color: #fff;
+}
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 28px;
+}
+.socials {
+  display: flex;
+  gap: 25px;
+  font-size: 11px;
+}
+.socials a:hover {
+  color: var(--mint);
+}
+.socials span {
+  margin-left: 4px;
+}
+.sidebar-bottom > p {
+  color: #ab9bbd;
+  font-size: 9px;
+  margin-top: 15px;
+}
+main {
+  margin-left: var(--sidebar);
+}
+main > section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100svh;
+  position: relative;
+}

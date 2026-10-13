@@ -1,0 +1,183 @@
+#web,
+#ml,
+#experience {
+  padding-block: 26px;
+  min-height: 100svh;
+}
+#web .section-header,
+#ml .section-header,
+#experience .section-header {
+  margin-bottom: 18px;
+}
+#web .section-header > .eyebrow,
+#ml .section-header > .eyebrow,
+#experience .section-header > .eyebrow {
+  margin-bottom: 10px;
+}
+#web h2,
+#ml h2,
+#experience h2 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+#web .section-description,
+#ml .section-description {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.gallery-card {
+  height: clamp(340px, calc(100svh - 335px), 500px);
+  min-height: 0;
+  flex-basis: 280px;
+  width: 280px;
+}
+.gallery-card .project-info {
+  padding: 12px 16px;
+}
+.gallery-card .project-info h3 {
+  font-size: 17px;
+}
+.gallery-card .project-info p {
+  font-size: 11px;
+  min-height: 0;
+  line-height: 1.65;
+}
+.gallery-card .map-visual svg,
+.gallery-card .network-visual svg,
+.gallery-card .project-visual svg {
+  height: clamp(80px, calc(100svh - 580px), 160px);
+}
+.gallery-card .project-action {
+  margin-block: 10px;
+  padding-top: 8px;
+}
+.gallery-track {
+  padding-block: 4px 12px;
+}
+.gallery-controls {
+  margin-top: 8px;
+}
+.gallery-controls button {
+  width: 32px;
+  height: 32px;
+}
+.career-timeline ol {
+  grid-template-columns: repeat(5, 220px);
+  min-width: 1100px;
+}
+.career-timeline article {
+  padding: 12px;
+}
+.career-timeline h3 {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.career-timeline .organization {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.timeline-category {
+  margin-top: 4px;
+  font-size: 7px;
+}
+.timeline-guide {
+  margin-bottom: 12px;
+  font-size: 10px;
+}
+.timeline-details {
+  background: none;
+  border: 0;
+  color: var(--mint);
+  font-size: 10px;
+  padding: 9px 0 0;
+}
+.timeline-details:hover {
+  text-decoration: underline;
+}
+.career-timeline + .publications {
+  margin-top: 12px;
+  padding-top: 12px;
+}
+#experience .publications > p:not(.eyebrow) {
+  font-size: 9px;
+}
+@media (max-width: 900px) {
+  #web,
+  #ml,
+  #experience {
+    min-height: calc(100svh - 114px);
+    padding-block: 20px;
+  }
+  #web h2,
+  #ml h2,
+  #experience h2 {
+    font-size: 28px;
+  }
+  .gallery-card {
+    height: clamp(330px, calc(100svh - 375px), 470px);
+    width: 250px;
+    flex-basis: 250px;
+  }
+  .gallery-card .map-visual svg,
+  .gallery-card .network-visual svg,
+  .gallery-card .project-visual svg {
+    height: clamp(65px, calc(100svh - 670px), 130px);
+  }
+}
+@media (max-width: 540px) {
+  #web h2,
+  #ml h2,
+  #experience h2 {
+    font-size: 25px;
+  }
+  #web .section-description,
+  #ml .section-description {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .career-timeline ol {
+    display: grid;
+    padding: 0 5px;
+  }
+  .career-timeline ol::before {
+    left: 5px;
+    right: 5px;
+    top: 50%;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+  .career-timeline li {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-inline: 10px;
+  }
+  .career-timeline li article {
+    margin: 0 0 20px;
+  }
+  .career-timeline li:nth-child(even) article {
+    grid-row: 2;
+    margin: 20px 0 0;
+  }
+  .career-timeline .timeline-node {
+    top: calc(50% - 5px);
+    left: 50%;
+  }
+  .career-timeline article::after {
+    top: auto;
+    bottom: -21px;
+    left: 50%;
+    height: 20px;
+    width: 1px;
+  }
+  .career-timeline li:nth-child(even) article::after {
+    top: -21px;
+    bottom: auto;
+    left: 50%;
+    height: 20px;
+    width: 1px;
+  }
+  #experience .publications > p > span {
+    display: inline;
+    margin-right: 8px;
+  }
+}

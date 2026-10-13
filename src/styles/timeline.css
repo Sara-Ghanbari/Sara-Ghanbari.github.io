@@ -1,0 +1,131 @@
+.career-timeline {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6c8c7d #ffffff08;
+}
+.career-timeline ol {
+  display: grid;
+  grid-template-columns: repeat(5, 260px);
+  min-width: 1300px;
+  list-style: none;
+  padding: 0 5px;
+  margin: 0;
+  position: relative;
+}
+.career-timeline ol::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, #bde8d240, #bde8d2, #bde8d240);
+}
+.career-timeline li {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-inline: 10px;
+}
+.career-timeline article {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #1b2426;
+  margin-bottom: 26px;
+  position: relative;
+}
+.career-timeline li:nth-child(even) article {
+  grid-row: 2;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+.timeline-node {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--mint);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #bde8d212;
+}
+.career-timeline article::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 26px;
+  background: #bde8d260;
+  bottom: -27px;
+  left: 50%;
+}
+.career-timeline li:nth-child(even) article::after {
+  bottom: auto;
+  top: -27px;
+}
+.career-timeline h3 {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+.career-timeline article > p:not(.organization) {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 12px 0;
+}
+.career-timeline .tags > span {
+  font-size: 8px;
+  padding: 2px 5px;
+}
+.career-timeline + .publications {
+  margin-top: 28px;
+}
+@media (max-width: 540px) {
+  .career-timeline ol {
+    display: block;
+    min-width: 0;
+    padding-left: 20px;
+  }
+  .career-timeline ol::before {
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: auto;
+  }
+  .career-timeline li {
+    display: block;
+    padding: 0 0 0 10px;
+  }
+  .career-timeline li article,
+  .career-timeline li:nth-child(even) article {
+    margin: 0 0 22px;
+  }
+  .career-timeline .timeline-node {
+    left: -19px;
+    top: 22px;
+  }
+  .career-timeline article::after,
+  .career-timeline li:nth-child(even) article::after {
+    left: -24px;
+    top: 26px;
+    height: 1px;
+    width: 24px;
+  }
+}
+.timeline-category {
+  display: block;
+  margin-top: 8px;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  color: var(--mint);
+}
+.timeline-guide {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.career-timeline {
+  padding-bottom: 16px;
+}
